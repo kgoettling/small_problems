@@ -47,15 +47,11 @@ def split_text(text)
         chr_counter += word.size + 1
         curr_line << ' ' + word
       else
-        #text_arr << curr_line + 
-        #           ' ' *(MAX_TEXT_SIZE - chr_counter)
         text_arr << curr_line.center(MAX_TEXT_SIZE)
         curr_line = word
         chr_counter = word.size
       end
     end
-    #text_arr << curr_line + 
-    #            ' ' *(MAX_TEXT_SIZE - chr_counter)
     text_arr << curr_line.center(MAX_TEXT_SIZE)
   else
     text_arr << text
